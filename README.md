@@ -45,5 +45,5 @@ Un [draft de haut niveau de l'architecture cible](https://miro.com/app/board/uXj
 # ℹ️ NB
 
 - Les interactions avec Camel passeront idéalement par [JBang!](https://camel.apache.org/manual/camel-jbang.html)
-- Une démo [KillerCod](https://killercoda.com/opt-labs/)a sera livrée et intégrée aux cours de l'OPT-NC... et pourra servir de support lors des démos, voire lors de la soutenance
+- Une démo [KillerCoda](https://killercoda.com/opt-labs/) sera livrée et intégrée aux cours de l'OPT-NC... et pourra servir de support lors des démos, voire lors de la soutenance
 - Les images Docker ou docker-compose seront utilisées pour dépoyer Kafka, OpenSearch, Spark, ...
