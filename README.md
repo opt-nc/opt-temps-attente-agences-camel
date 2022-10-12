@@ -37,7 +37,7 @@ Via des outils existants et industriels, configurer une intégration idéalement
 
 # 🗺️ Architecture
 
-Un [draft macro de l'architecture cible](https://miro.com/app/board/uXjVPTe9O_o=/) : 
+Un [draft macro de l'architecture cible envisagée](https://miro.com/app/board/uXjVPTe9O_o=/) : 
 
 ![image](https://user-images.githubusercontent.com/5235127/193950043-f36aadd3-e485-4f6b-bd7d-b98b287634d7.png)
 
