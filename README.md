@@ -34,6 +34,7 @@ Via des outils existants et industriels, configurer une intégration idéalement
 4. Via Camel, consommer les messages et les pousser dans une instance OpenSearch
 5. Construire un ou des tableaux de bord, utiliser les fonctionnalités de geolocalisation, et explorer les fonctionnalités IA et ML d'OpenSearch
 6. **BONUS*** : Via Camel, consommer les messages Kafka et les pousser dans une instance [Apache Spark](https://spark.apache.org/)
+7. Investiguer les [capacités de Open Search Data Prepper 2.0](https://twitter.com/OpenSearchProj/status/1582836234178940928)
 
 # 🗺️ Architecture
 
