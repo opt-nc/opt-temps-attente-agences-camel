@@ -1,6 +1,6 @@
 # ❔ A propos
 
-Cette repo s'inscrit dans le cadre d'un projet conjoint OPT-NC et l'[UNC](https://unc.nc/).
+Cette repository s'inscrit dans le cadre d'un projet conjoint OPT-NC et l'[UNC](https://unc.nc/).
 
 - Le sujet est fourni par l'OPT-NC
 - La réalisation est assurée par les étudiants avec en support l'OPT
