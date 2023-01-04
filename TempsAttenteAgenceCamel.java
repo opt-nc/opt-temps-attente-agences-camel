@@ -24,8 +24,8 @@ public class TempsAttenteAgenceCamel {
     public static class TempsAttenteRouteBuilder extends RouteBuilder {
         @Override
         public void configure() {
-            from("timer://foo?preiod=5000")
-                    .to("http:8080/temps-attente/agence/4161")
+            from("timer://foo?period=5000")
+                    .to("http:8080://temps-attente/agence/4161")
                     .log("The body was - ${body}");
 
             /* from("timer:mytimer?repeatCount=1")
