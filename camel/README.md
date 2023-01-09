@@ -1,4 +1,4 @@
-ré-requis : s'assurer que JBang est installé sur le poste
+Pré-requis : s'assurer que JBang est installé sur le poste
 Si ce n'est pas le cas cliquer sur l'url https://www.jbang.dev/documentation/guide/latest/installation.html, repérer l'OS correspondant au poste et suivre les instructions.
 
 Une fois le pré-requis confirmé, réaliser les étapes ci-dessous :
