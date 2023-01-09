@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- camel-k: language=xml -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://camel.apache.org/schema/spring"
+        xsi:schemaLocation="
+            http://camel.apache.org/schema/spring
+            https://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- Write your routes here, for example: -->
+    <route id="csv-xml">
+        <from uri="timer:jetty:http://localhost:8080/csv?period={{time:300000}}"/>
+        <log message="Received data: ${body}" loggingLevel="INFO"/>
+        <marshal>
+            <csv />
+        </marshal>
+        <to uri="file:./data.csv?fileName=output_${date:now:yyyyMMdd-HHmmss}.csv"/>
+        <setBody>
+            <simple>Hello Camel from ${routeId}</simple>
+        </setBody>
+    </route>
+    
+</routes>
