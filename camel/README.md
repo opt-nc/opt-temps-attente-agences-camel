@@ -1,24 +1,65 @@
-Pré-requis : s'assurer que JBang est installé sur le poste
-Si ce n'est pas le cas cliquer sur l'url https://www.jbang.dev/documentation/guide/latest/installation.html, repérer l'OS correspondant au poste et suivre les instructions.
+# Prérequis
 
-Une fois le pré-requis confirmé, réaliser les étapes ci-dessous :
-1. Créer un répertoire pour le projet
-2. Ouvrir un terminal (DOS ou PowerShell)
-3. Se position sur le repertoire créé
-4. Y créer un fichier .java et y intégrer le code 
-5. Utiliser la commande "jbang init --template=cli 'script.java'" pour initialiser le nouveau projet
-	#Initialisation projet JBang
-	jbang init --template=cli my-api/agences.java
-6. Les commandes ci-dessous permettent d'exécuter le script
-	jbang run .\agences.java
-	jbang .\agences.java
-	
-7. Il est possible de créer des alias par script afin d'en faciliter l'exécution ultérieur
-	#Création d'un alias Jbang
-	jbang alias add --name agence .\my-api\agences.java
+* docker 
+* camel-jbang
 
-	#Affichage des alias disponibles
-	jbang alias list
 
-	#Execution du projet JBang via l'alias
-	jbang agence
+## Installer camel-jbang  
+## Linux :
+Note: Java n'a pas besoin d'être déjâ présent car jbang va le télécharger automatiquement si java 8 ou un JDK plus récent n'est pas détecté.
+    
+### 1. Installer jbang 
+Ouvrir un terminal puis exécuter une des deux commandes suivantes :
+
+* Avec SDKMan
+``` bash 
+sdk install jbang
+```
+* Avec jbang lui même :
+``` bash 
+curl -Ls https://sh.jbang.dev | bash -s - app setup
+```
+Une fois installer, il est recommandé d'exécuter la commande suivante afin de modifier les variables d'environnement pour inclure les scripts jbang :
+```bash
+jbang app setup
+```
+
+## Windows :
+* Avec jbang : 
+    * ouvrir powershell et exécuter la commande suivante :
+    ```powershell
+    iex "& { $(iwr -useb https://ps.jbang.dev) } app setup"
+    ```
+* Avec chocolatey
+    * A partir d'une invite commande installer chocolatey :
+    ```bash
+    choco install jdk11
+    ```
+    * Une fois java installer : 
+    ```bash 
+    choco install jbang
+    ```
+
+
+### 2. Installer camel
+Ouvrir une invite de commande ou un terminal et exécuter la commande suivante :
+``` bash 
+jbang app install camel@apache/camel
+``` 
+
+# Utilisation de la route camel : 
+Ouvrir un terminal ou une invite de commande puis exécuter les commandes suivantes :
+
+* Lancement de l'API des temps d'attente en agence de l'optnc avec docker
+``` bash 
+docker run -d --rm -p 8080:8080 optnc/opt-temps-attente-agences-api:latest
+```
+
+* Lancement de la route camel 
+``` bash 
+camel run routeXML.xml
+```
+# Déroulement et résultat attendu de la route : 
+Une fois lancé, la route camel envoie une requête get-HTTP vers l'API des temps d'attente de l'OPT. Cette dernière lui répond et la route reçoit le message de retour dans lequel se trouve les temps d'attente de toutes les agences du territoire. Dans la continuité, les données sont convertie au format CSV puis ajoutées au fichier **temps-attente.csv** se trouvant dans le dossier nommé **data**
+
+Cette procédure est répétée toute les 5 minutes tant que la route n'est pas manuellement arrêtée. 

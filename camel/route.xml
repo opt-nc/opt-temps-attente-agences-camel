@@ -7,17 +7,36 @@
             http://camel.apache.org/schema/spring
             https://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<!-- Write your routes here, for example: -->
-    <route id="csv-xml">
-        <from uri="timer:jetty:http://localhost:8080/csv?period={{time:300000}}"/>
-        <log message="Received data: ${body}" loggingLevel="INFO"/>
+    <!-- Write your routes here, for example: -->
+    <route id="http-get-route">
+        
+        <!-- Ordonnance de l'exécution de la route toutes les 5 minutes -->
+        <from uri="timer:http-get-timer??period={{time:300000}}"/>
+        
+
+        <!-- URL source de l'API avec la méthode GET -->
+        <to uri="http://localhost:8080/temps-attente/agences?httpMethod=GET"/>
+        
+        <!-- Déserialisation des données au format JSON -->
+        <unmarshal>
+            <json />
+        </unmarshal>
+        
+        <!-- Affichage du JSON dans le terminal -->
+        <log message="Received data: ${body}"/>
+        
+        <!-- Conversion des données au format CSV -->
         <marshal>
-            <csv />
+            <csv delimiter="," quoteDisabled="false" useMaps="false" >
+            </csv>
         </marshal>
-        <to uri="file:./data.csv?fileName=output_${date:now:yyyyMMdd-HHmmss}.csv"/>
-        <setBody>
-            <simple>Hello Camel from ${routeId}</simple>
-        </setBody>
+        
+        <!-- Route de destination du fichier avec ajout des données à la fin du csv-->
+        <to uri="file:./data.csv?fileExist=Append&amp;fileName=temps-attente.csv"/>
+        
+        <!-- Affichage du CSV dans le terminal -->
+        <log message="Received data: ${body}"/>
+
     </route>
-    
 </routes>
+
