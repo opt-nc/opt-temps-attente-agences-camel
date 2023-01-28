@@ -19,24 +19,21 @@
         
         <!-- Déserialisation des données au format JSON -->
         <unmarshal>
-            <json />
+            <json library="Jackson" prettyPrint="true" />
         </unmarshal>
         
         <!-- Affichage du JSON dans le terminal -->
         <log message="Received data: ${body}"/>
         
-        <!-- Conversion des données au format CSV -->
+        <!-- JSON -->
+        <!-- Conversion des données au format JSON -->
         <marshal>
-            <csv delimiter="," quoteDisabled="false" useMaps="false" >
-            </csv>
+            <json library="Jackson" prettyPrint="true" />
         </marshal>
-        
-        <!-- Route de destination du fichier avec ajout des données à la fin du csv-->
-        <to uri="file:./data.csv?fileExist=Append&amp;fileName=temps-attente.csv"/>
-        
-        <!-- Affichage du CSV dans le terminal -->
+        <to uri="file:./data?fileExist=Append&amp;fileName=temps-attente.json"/>
+
+        <!-- Affichage du JSON dans le terminal -->
         <log message="Received data: ${body}"/>
 
     </route>
 </routes>
-
