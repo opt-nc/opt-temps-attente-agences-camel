@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- camel-k: language=xml -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://camel.apache.org/schema/spring"
+        xsi:schemaLocation="
+            http://camel.apache.org/schema/spring
+            https://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- Write your routes here, for example: -->
+    <route id="kafka-get-route">
+         
+         <!-- URL source Kafka et indication du groupid -->
+        <from uri="kafka:temps-attente?brokers=localhost:9092&amp;groupId=test"/>
+        
+        <!-- Déserialisation des données au format JSON -->
+        <unmarshal>
+            <json library="Jackson" prettyPrint="true" />
+        </unmarshal>
+
+        <!-- Affichage du JSON dans le terminal -->
+        <log message="Received data: ${body}" loggingLevel="DEBUG"/>
+        
+        <!-- Conversion des données au format CSV -->
+        <marshal>
+            <json library="Jackson" prettyPrint="true" />
+        </marshal>
+
+        <!-- Route de destination du fichier avec ajout des données à la fin du csv-->
+        <to uri="file:./data?fileExist=Append&amp;fileName=temps-attente.json"/>
+        
+        <!-- Affichage du CSV dans le terminal -->
+        <log message="Received data: ${body}" loggingLevel="DEBUG"/>
+
+    </route>
+</routes>
