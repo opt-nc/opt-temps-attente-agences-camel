@@ -1,8 +1,8 @@
 # __QuickStart__
 
-## ℹ️  Prérequis
+## 🧰 Prérequis
 
-Les éléments suivant doivent-être installés :
+Les éléments suivant doivent-être installés (cf. liens d'installation ci-dessous) :
 
 * <a href="https://docs.docker.com/engine/install/" target="_blank"> Docker </a>
 * <a href="https://www.jbang.dev/documentation/guide/latest/installation.html" target="_blank"> JBang </a>
@@ -20,7 +20,7 @@ Ajouter danse le fichier host la ligne suivante :
 127.0.0.1 kafka
 ```
 
- ## ℹ️   Mode opératoire
+ ## 🧑 Mode opératoire ‍🎓
 
  * Lancer un invite de commande (bash, PowerShell, Terminal Windows)
  * Se placer dans le dossier _scripts_
@@ -32,7 +32,7 @@ A noter qu'il sera sans doute nécessaire d'actualiser la page Kowl pour que le 
 ![image](https://github.com/opt-nc/opt-temps-attente-agences-camel/blob/20-fournir-quickstartmd/doc/kowl.png)
 
 
-## Description des livrables
+## 🔖 Description des livrables
 
 Le répertoire _scripts_ contient :
 
