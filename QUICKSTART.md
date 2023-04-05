@@ -15,7 +15,7 @@ Les ports suivant doivent-être libres pour que les conteneurs Docker puissent f
 * 9092 / 9093 - kafka
 * 2181 - zookeeper
 
-Ajouter danse le fichier host la ligne suivante :
+Ajouter dans le fichier host la ligne suivante :
 ```bash
 127.0.0.1 kafka
 ```
