@@ -22,11 +22,9 @@ Ajouter dans le fichier host la ligne suivante :
 
  ## 🧑 Mode opératoire ‍🎓
 
- * Lancer un invite de commande (bash, PowerShell, Terminal Windows)
+ * Lancer un invite de commande (PowerShell, Terminal Windows)
  * Se placer dans le dossier _scripts_
- * Exécuter le fichier _.ps1_ pour Windows/Linux (si Powershell est installé) ou _.sh_ pour Linux. 
- 
-![image](https://github.com/opt-nc/opt-temps-attente-agences-camel/blob/main/doc/shell.png)
+ * Exécuter le fichier _.ps1_. 
 
 A noter qu'il sera sans doute nécessaire d'actualiser la page Kowl pour que le flux de données soit visible.
-![image](https://github.com/opt-nc/opt-temps-attente-agences-camel/blob/main/doc/kowl.png)
+
