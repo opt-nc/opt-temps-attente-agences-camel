@@ -29,12 +29,17 @@ services:
     ports:
       - "9092:9092"
       - "9093:9093"
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics.sh --bootstrap-server kafka:9092 --list"]
     depends_on: 
       - zookeeper
-    environment:
+    environment:             
+      - KAFKA_BROKER_ID=1
+      - KAFKA_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092      
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
-       
+
   kowl:
     image: quay.io/cloudhut/kowl:v1.3.1
     container_name: kowl
@@ -42,7 +47,8 @@ services:
     ports:
       - "8888:8888"
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
     environment:
       - KAFKA_BROKERS=kafka:9092
       - SERVER_LISTENPORT=8888
