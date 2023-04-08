@@ -15,7 +15,8 @@ sleep 5
 
 echo "Vérification de l'existance du topic Kafka $TOPIC"
 # vérifier si le topic existe
-if docker exec -it kafka kafka-topics.sh --bootstrap-server $BROKER --list | grep -q "$TOPIC"; then
+if #sudo docker exec -it kafka kafka-topics.sh --bootstrap-server $BROKER --list | grep -q "$TOPIC"; then
+    kafkacat -b $BROKER -L | grep -q "$TOPIC"; then
     echo "Le topic $TOPIC existe déjà."
 else
     # créer un nouveau topic
