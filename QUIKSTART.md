@@ -35,9 +35,8 @@ Ajouter dans le fichier host la ligne suivante :
  * Se placer dans le dossier _scripts_ 
 
 `cd scripts`
- * Exécuter le fichier _.sh_ pour Linux. 
- `
- ./quickstart.sh
- `
+ * Exécuter le fichier _.sh_ pour Linux.
+
+ `./quickstart.sh`
  
 A noter qu'il sera sans doute nécessaire d'actualiser la page Kowl pour que le flux de données soit visible.
