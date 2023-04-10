@@ -11,7 +11,11 @@ Les éléments suivant doivent-être installés (cf. liens d'installation ci-des
 sdk install jbang -y && jbang app setup
 `
 * <a href="https://camel.apache.org/manual/camel-jbang.html" target="_blank"> Camel-JBang </a>
-* KafkaCat : `apt install -y kafkacat`
+
+`jbang app install camel@apache/camel`
+* KafkaCat : 
+ 
+`apt install -y kafkacat`
 
 Les ports suivant doivent-être libres pour que les conteneurs Docker puissent fonctionner :
 
