@@ -8,7 +8,7 @@ Les éléments suivant doivent-être installés (cf. liens d'installation ci-des
 * <a href="https://www.jbang.dev/documentation/guide/latest/installation.html" target="_blank"> JBang </a>
 
 `
-sdk install jbang -y && jbang app setup
+sdk install -y jbang && jbang app setup
 `
 * <a href="https://camel.apache.org/manual/camel-jbang.html" target="_blank"> Camel-JBang </a>
 
