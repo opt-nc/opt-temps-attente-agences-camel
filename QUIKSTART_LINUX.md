@@ -1,4 +1,4 @@
-# __QuickStart Linux__
+# __QuickStart__
 
 ## 🧰 Prérequis
 
