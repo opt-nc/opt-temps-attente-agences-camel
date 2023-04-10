@@ -26,5 +26,8 @@ Ajouter dans le fichier host la ligne suivante :
  * Lancer un invite de commande bash
  * Se placer dans le dossier _scripts_
  * Exécuter le fichier _.sh_ pour Linux. 
+ '''bash
+ ./quickstart.sh
+ '''
  
 A noter qu'il sera sans doute nécessaire d'actualiser la page Kowl pour que le flux de données soit visible.
