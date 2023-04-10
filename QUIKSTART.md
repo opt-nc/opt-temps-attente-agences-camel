@@ -32,7 +32,9 @@ Ajouter dans le fichier host la ligne suivante :
  ## 🧑 Mode opératoire ‍🎓
 
  * Lancer un invite de commande bash
- * Se placer dans le dossier _scripts_
+ * Se placer dans le dossier _scripts_ 
+
+`cd scripts`
  * Exécuter le fichier _.sh_ pour Linux. 
  `
  ./quickstart.sh
