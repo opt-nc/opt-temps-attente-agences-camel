@@ -3,8 +3,8 @@
 # Variables
 BROKER="localhost:9092"
 TOPIC="temps-attente"
-# URL Kowl
-URL="http://localhost:8888/topics/$TOPIC?o=-1&p=-1&s=50#messages"
+# URL RedPanda
+URL="http://0.0.0.0:8081/topics/$TOPIC?o=-1&p=-1&q&s=50#messages"
 
 # Exécute docker-compose pour démarrer les conteneurs
 echo "Lancement des conteneurs" 
@@ -15,13 +15,13 @@ sleep 5
 
 echo "Vérification de l'existance du topic Kafka $TOPIC"
 # vérifier si le topic existe
-if #sudo docker exec -it kafka kafka-topics.sh --bootstrap-server $BROKER --list | grep -q "$TOPIC"; then
+if #sudo docker exec -it kafka_tps_attente_kml kafka-topics.sh --bootstrap-server $BROKER --list | grep -q "$TOPIC"; then
     kafkacat -b $BROKER -L | grep -q "$TOPIC"; then
     echo "Le topic $TOPIC existe déjà."
 else
     # créer un nouveau topic
-    #docker exec -it kafka kafka-console-producer.sh --broker-list $BROKER --topic $TOPIC
-    docker exec -it kafka kafka-topics.sh --bootstrap-server $BROKER --create --topic $TOPIC --partitions 1 --replication-factor 1
+    #docker exec -it kafka_tps_attente_kml kafka-console-producer.sh --broker-list $BROKER --topic $TOPIC
+    docker exec -it kafka_tps_attente_kml kafka-topics.sh --bootstrap-server $BROKER --create --topic $TOPIC --partitions 1 --replication-factor 1
 
     # vérifier si la création du topic est réussie
     if [ $? -eq 0 ]; then
