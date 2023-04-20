@@ -28,7 +28,7 @@
         </marshal>
 
         <!-- URL de destination Kafka et paramétrage de la clé -->
-        <to uri="kafka:temps-attente?brokers=localhost:9092&amp;key=idAgence"/>
+        <to uri="kafka:temps-attente?brokers=127.0.0.1:9094&amp;key=idAgence"/>
         
     </route>
 </routes>

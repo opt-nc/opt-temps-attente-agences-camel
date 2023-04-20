@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-BROKER="localhost:9092"
+BROKER="localhost:9094"
 TOPIC="temps-attente"
 # URL RedPanda
 URL="http://0.0.0.0:8081/topics/$TOPIC?o=-1&p=-1&q&s=50#messages"

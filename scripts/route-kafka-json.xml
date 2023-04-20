@@ -11,7 +11,7 @@
     <route id="kafka-get-route">
          
          <!-- URL source Kafka et indication du groupid -->
-        <from uri="kafka:temps-attente?brokers=localhost:9092&amp;groupId=temps-attente"/>
+        <from uri="kafka:temps-attente?brokers=127.0.0.1:9094&amp;groupId=temps-attente"/>
         
         <!-- Déserialisation des données au format JSON -->
         <unmarshal>
