@@ -8,14 +8,14 @@ Les éléments suivant doivent-être installés (cf. liens d'installation ci-des
 * <a href="https://www.jbang.dev/documentation/guide/latest/installation.html" target="_blank"> JBang </a>
 
 `
-sdk install -y jbang && jbang app setup
+sdk install jbang && jbang app setup
 `
 * <a href="https://camel.apache.org/manual/camel-jbang.html" target="_blank"> Camel-JBang </a>
 
 `jbang app install camel@apache/camel`
 * KafkaCat : 
  
-`apt install -y kafkacat`
+`sudo apt install -y kafkacat`
 
 Les ports suivant doivent-être libres pour que les conteneurs Docker puissent fonctionner :
 
@@ -24,14 +24,9 @@ Les ports suivant doivent-être libres pour que les conteneurs Docker puissent f
 * 9092 / 9093 - kafka
 * 2181 - zookeeper
 
-Ajouter dans le fichier host la ligne suivante :
-```bash
-127.0.0.1 kafka
-```
-
  ## 🧑 Mode opératoire ‍🎓
 
- * Lancer un invite de commande bash
+ * Lancer une invite de commande bash
  * Se placer dans le dossier _scripts_ 
 
 `cd scripts`
@@ -39,4 +34,4 @@ Ajouter dans le fichier host la ligne suivante :
 
  `./quickstart.sh`
  
-A noter qu'il sera sans doute nécessaire d'actualiser la page Kowl pour que le flux de données soit visible.
+:warning: A noter qu'il sera sans doute nécessaire d'actualiser la page RedPanda pour que le flux de données soit visible.

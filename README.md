@@ -1,13 +1,13 @@
 # ❔ A propos
 
-Cette repository s'inscrit dans le cadre d'un projet conjoint OPT-NC et l'[UNC](https://unc.nc/).
+Ce repository s'inscrit dans le cadre d'un projet conjoint OPT-NC et l'[UNC](https://unc.nc/).
 
 - Le sujet est fourni par l'OPT-NC
 - La réalisation est assurée par les étudiants avec en support l'OPT
 
 # ℹ️ Contexte OPT
 
-[L'OPT utilise Kafka](https://kafka.apache.org/powered-by) pour partager et transformer un volume toujours plus important entre ses métier. Nous souhatns maintenant nous attaquer à diverses manières de consommer ces données à moindre effort... puis de les valoriser via des solutions dédiées à la chose.
+[L'OPT utilise Kafka](https://kafka.apache.org/powered-by) pour partager et transformer un volume toujours plus important entre ses métiers. Nous souhaitons maintenant nous attaquer à diverses manières de consommer ces données à moindre effort... puis de les valoriser via des solutions dédiées à la chose.
 
 ![image](https://user-images.githubusercontent.com/5235127/193949632-d079458c-47a4-4c34-83d1-6cd30c46eca4.png)
 
@@ -16,7 +16,7 @@ Les résultats de cette expérimentation seront recyclés de manière opération
 # 🤹🏻 Compétences
 
 - Data Engineering
-- Datascientist
+- Data Scientist
 
 #  🧑‍🤝‍🧑 Equipe
 
@@ -32,7 +32,7 @@ Via des outils existants et industriels, configurer une intégration idéalement
 2. Via une route Camel, pousser les données du Poll dans un `csv`
 3. Via un **Poll régulier depuis Camel**, pousser les données dans un topic dédié Kafka
 4. Via Camel, consommer les messages et les pousser dans une instance OpenSearch
-5. Construire un ou des tableaux de bord, utiliser les fonctionnalités de geolocalisation, et explorer les fonctionnalités IA et ML d'OpenSearch
+5. Construire un ou des tableaux de bord, utiliser les fonctionnalités de géolocalisation, et explorer les fonctionnalités IA et ML d'OpenSearch
 6. **BONUS*** : Via Camel, consommer les messages Kafka et les pousser dans une instance [Apache Spark](https://spark.apache.org/)
 7. Investiguer les [capacités de Open Search Data Prepper 2.0](https://twitter.com/OpenSearchProj/status/1582836234178940928)
 
