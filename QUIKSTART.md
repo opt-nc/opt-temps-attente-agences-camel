@@ -35,6 +35,16 @@ Les ports suivant doivent-être libres pour que les conteneurs Docker puissent f
 - `9092/9093` : [`bitnami/kafka`](https://hub.docker.com/r/bitnami/kafka)
 - `2181` : [`docker.io/bitnami/zookeeper:latest`](https://hub.docker.com/r/bitnami/zookeeper/)
 
+```shell
+sudo netstat -tulpn | grep LISTEN
+sudo netstat -tulpn | grep LISTEN | grep 8080
+sudo netstat -tulpn | grep LISTEN | grep 8888
+sudo netstat -tulpn | grep LISTEN | grep 9092
+sudo netstat -tulpn | grep LISTEN | grep 9093
+sudo netstat -tulpn | grep LISTEN | grep 2181
+```
+
+
  ## 🚀 Démarer
 
 ```shell
