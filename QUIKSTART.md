@@ -14,8 +14,7 @@ Les éléments suivant doivent-être installés (cf. liens d'installation ci-des
 Install [`Camel-JBang `](https://www.jbang.dev/download/) :
 
 ```shell
-sdk install jbang
-sdk install jbang app setup
+sdk install jbang && jbang app setup
 ```
 
 ## 🐪 `Camel-JBang`
