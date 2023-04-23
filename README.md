@@ -23,6 +23,7 @@ Les résultats de cette expérimentation seront recyclés de manière opération
 - 🧑‍🤝‍🧑 [Antoine GINDRE](https://www.linkedin.com/in/antoine-a-gindre/) (aka. [`@AntoineArthurG`](https://github.com/AntoineArthurG)): développeur
 - 🧑‍🤝‍🧑 [Kenneth WINCHESTER](https://www.linkedin.com/in/kenneth-opt-3498a5252/) (aka. [`@Kenneth-OPT`](https://github.com/Kenneth-OPT))  : développeur
 - 👨‍🎨 [Adrien SALES](https://www.linkedin.com/in/adrien-sales/) : Product Owner, Architecte
+- 👩 [Michèle Barré](https://www.linkedin.com/in/michelebarre/) : Senior DEVOPS & Full Stack Dev 
 
 # 🎯 Pitch
 
