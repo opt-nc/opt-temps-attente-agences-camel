@@ -56,7 +56,7 @@ cd opt-temps-attente-agences-camel
 
 ```shell
 cd scripts
-./quickstart.sh`
+./quickstart.sh
 ```
 
 :warning: A noter qu'il sera sans doute nécessaire d'actualiser la page RedPanda pour que le flux de données soit visible.
