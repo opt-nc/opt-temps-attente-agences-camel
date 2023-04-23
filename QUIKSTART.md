@@ -49,12 +49,13 @@ sudo netstat -tulpn | grep LISTEN | grep 2181
 
 ```shell
 gh repo clone opt-nc/opt-temps-attente-agences-camel
-cd opt-temps-attente-agences-camel/scripts
+cd opt-temps-attente-agences-camel
 ```
 
  Exécuter `quickstart.sh`:
 
 ```shell
+cd scripts
 ./quickstart.sh`
 ```
 
