@@ -23,7 +23,7 @@ sdk install jbang && jbang app setup
 
 
 ```shell
-jbang app install camel@apache/camel`
+jbang app install camel@apache/camel
 ```
 
 ## 👂 Ports
