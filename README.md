@@ -55,3 +55,4 @@ Un [draft macro de l'architecture cible envisagée](https://miro.com/app/board/u
 - [⌨️ Pipe xlsx files into/from Kafka... From cli with (k)cat 🙀](https://dev.to/optnc/pipe-xlsx-files-intofrom-kafka-from-cli-with-kcat-plp)
 - :octocat: [Atelier spring-Kafka](https://github.com/opt-nc/atelier-spring-kafka/)
 - [📖 Waiting time at OPT-NC Series' Articles](https://dev.to/adriens/series/18414)
+- [🛒 API sur marketplace](https://rapidapi.com/opt-nc-opt-nc-default/api/temps-attente-en-agence)
