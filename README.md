@@ -48,3 +48,8 @@ Un [draft macro de l'architecture cible envisagée](https://miro.com/app/board/u
 - Les interactions avec Camel passeront idéalement par [JBang!](https://camel.apache.org/manual/camel-jbang.html)
 - Une démo [KillerCoda](https://killercoda.com/opt-labs/) sera livrée et intégrée aux cours de l'OPT-NC... et pourra servir de support lors des démos, voire lors de la soutenance
 - Les images Docker ou docker-compose seront utilisées pour dépoyer Kafka, OpenSearch, Spark, ...
+
+# 📑 Ressources
+
+- [⌨️ Pipe xlsx files into/from Kafka... From cli with (k)cat 🙀](https://dev.to/optnc/pipe-xlsx-files-intofrom-kafka-from-cli-with-kcat-plp)
+- :octocat: [Atelier spring-Kafka](https://github.com/opt-nc/atelier-spring-kafka/)
