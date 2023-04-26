@@ -20,15 +20,15 @@
         <unmarshal>
             <json library="Jackson" prettyPrint="false" />
         </unmarshal>
-        
-        <!-- JSON -->
-        <!-- Conversion des données au format JSON -->
-        <marshal>
-            <json library="Jackson" prettyPrint="false" />
-        </marshal>
 
-        <!-- URL de destination Kafka et paramétrage de la clé -->
-        <to uri="kafka:temps-attente?brokers=127.0.0.1:9094&amp;key=idAgence"/>
-        
+        <!-- Split le contenu en plusieurs messages -->
+        <split>
+            <simple>${body}</simple>
+            <to uri="kafka:temps-attente?brokers=127.0.0.1:9094&amp;key=idAgence"/>
+        </split>
+
     </route>
+
 </routes>
+
+
