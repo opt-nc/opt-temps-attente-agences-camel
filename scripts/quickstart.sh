@@ -3,12 +3,14 @@
 # Variables
 BROKER="localhost:9094"
 TOPIC="temps-attente"
+DELIMITER="idAgence"
+
 # URL RedPanda
 URL="http://0.0.0.0:8081/topics/$TOPIC?o=-1&p=-1&q&s=50#messages"
 
 # Exécute docker-compose pour démarrer les conteneurs
 echo "Lancement des conteneurs" 
-docker-compose -f temps_attente.yml up -d
+sudo docker-compose -f temps_attente.yml up -d
 
 # ajouter un temps de pause de 5 secondes
 sleep 5
@@ -21,7 +23,7 @@ if #sudo docker exec -it kafka_tps_attente_kml kafka-topics.sh --bootstrap-serve
 else
     # créer un nouveau topic
     #docker exec -it kafka_tps_attente_kml kafka-console-producer.sh --broker-list $BROKER --topic $TOPIC
-    docker exec -it kafka_tps_attente_kml kafka-topics.sh --bootstrap-server $BROKER --create --topic $TOPIC --partitions 1 --replication-factor 1
+    sudo docker exec -it kafka_tps_attente_kml kafka-topics.sh --bootstrap-server $BROKER --create --topic $TOPIC parse.key=true --property key.separator=$DELIMITER --partitions 1 --replication-factor 1
 
     # vérifier si la création du topic est réussie
     if [ $? -eq 0 ]; then
